@@ -1251,13 +1251,13 @@
             buttonNumber_ (buttonNumber),
             graphicDrawn_ (graphicDrawn)
         {
-            comps_ = (Point*) calloc((GP.getMaxIndex () - GP.getMinIndex ())/GP.getStepCount (), sizeof(Point));
+            comps_ = (Point*) calloc(GP.getStepCount () + 1, sizeof(Point));
             assert(comps_);
 
-            swaps_ = (Point*) calloc((GP.getMaxIndex () - GP.getMinIndex ())/GP.getStepCount (), sizeof(Point));
+            swaps_ = (Point*) calloc(GP.getStepCount () + 1, sizeof(Point));
             assert(swaps_);
 
-            time_  = (Point*) calloc((GP.getMaxIndex () - GP.getMinIndex ())/GP.getStepCount (), sizeof(Point));
+            time_  = (Point*) calloc(GP.getStepCount () + 1, sizeof(Point));
             assert(time_);
 
             assert(ok());

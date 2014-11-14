@@ -47,7 +47,7 @@ int main ()
 
         calculations (sortAlgArray, SORT_ALG_ARRAY_SIZE, buttonArray, BUTTON_ARRAY_SIZE, &mode, &updateGraphic);
 
-        rendering    (sortAlgArray, SORT_ALG_ARRAY_SIZE, buttonArray, BUTTON_ARRAY_SIZE,  mode);
+        //rendering    (sortAlgArray, SORT_ALG_ARRAY_SIZE, buttonArray, BUTTON_ARRAY_SIZE,  mode);
 
         txEnd ();
         txSleep (1000/30);

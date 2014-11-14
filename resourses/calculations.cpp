@@ -67,12 +67,15 @@ void calcGraphic (SortingAlgorithm sortAlg)
         fillArray (array, ROUND (i), true);
         Counters curRes = sortAlg.getSortFunc () (array, ROUND (i));
 
-        comps[j] = {x + ROUND (j * pointInterval), y1 - ROUND (curRes.getCompCount ()     * GP.getScale ())};
+        printf ("%d < %d\n", j, GP.getStepCount () + 1);
 
-        swaps[j] = {x + ROUND (j * pointInterval), y1 - ROUND (curRes.getSwapCount ()     * GP.getScale ())};
+        comps[j] = Point (x + ROUND (j * pointInterval), y1 - ROUND (curRes.getCompCount ()     * GP.getScale ()));
 
-        time[j]  = {x + ROUND (j * pointInterval), y1 - ROUND (curRes.getExecutionTime () * GP.getScale ())};
+        swaps[j] = Point (x + ROUND (j * pointInterval), y1 - ROUND (curRes.getSwapCount ()     * GP.getScale ()));
 
+        time[j]  = Point (x + ROUND (j * pointInterval), y1 - ROUND (curRes.getExecutionTime () * GP.getScale ()));
+
+        printf ("%d < %d\n", j, GP.getStepCount () + 1);
 
         i += indexInterval;
     }
